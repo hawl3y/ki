@@ -1,0 +1,56 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0 },
+};
+
+export default function Hero() {
+  return (
+    <section className="relative h-screen w-full overflow-hidden bg-neutral-950 flex items-center justify-center">
+      <Image
+        src="/images/hero.jpg"
+        alt="Kiyomi Hawley"
+        fill
+        className="object-cover object-center"
+        priority
+      />
+      <div className="absolute inset-0 bg-neutral-950/55" />
+
+      <motion.div
+        className="relative z-10 text-center px-6"
+        initial="hidden"
+        animate="show"
+        transition={{ staggerChildren: 0.18 }}
+      >
+        <motion.h1
+          variants={fadeUp}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="font-display text-6xl sm:text-8xl md:text-9xl tracking-[0.12em] text-stone-100 uppercase"
+        >
+          Kiyomi
+        </motion.h1>
+
+        <motion.p
+          variants={fadeUp}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-5 text-xs sm:text-sm tracking-[0.35em] text-stone-400 uppercase"
+        >
+          Singer &nbsp;·&nbsp; Songwriter &nbsp;·&nbsp; Artist
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4, duration: 1 }}
+      >
+        <div className="h-10 w-px bg-stone-400/40" />
+      </motion.div>
+    </section>
+  );
+}
