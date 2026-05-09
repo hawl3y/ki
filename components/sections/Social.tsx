@@ -1,6 +1,6 @@
 "use client";
 
-import Script from 'next/script';
+import { useEffect, useRef } from 'react';
 import { BEHOLD_WIDGET_ID, INSTAGRAM_URL, FACEBOOK_URL } from '@/lib/config';
 
 function InstagramIcon() {
@@ -22,6 +22,21 @@ function FacebookIcon() {
 }
 
 export default function Social() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const widget = document.createElement('behold-widget');
+    widget.setAttribute('feed-id', BEHOLD_WIDGET_ID);
+    containerRef.current.appendChild(widget);
+
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://w.behold.so/widget.js';
+    document.head.appendChild(script);
+  }, []);
+
   return (
     <section className="bg-neutral-950 py-28 px-6">
       <div className="max-w-5xl mx-auto">
@@ -45,18 +60,7 @@ export default function Social() {
           </a>
         </div>
 
-        <div id={`behold-widget-${BEHOLD_WIDGET_ID}`} />
-        <Script
-          id="behold-init"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.bh = window.bh || [];
-              window.bh.push({ widgetId: '${BEHOLD_WIDGET_ID}' });
-            `,
-          }}
-        />
-        <Script src="https://w.behold.so/widget.js" strategy="lazyOnload" />
+        <div ref={containerRef} />
       </div>
     </section>
   );
