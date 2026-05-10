@@ -36,11 +36,15 @@ export default function UpdatesPage() {
                   <img
                     src={update.imageUrl}
                     alt={update.title}
-                    className="w-full aspect-video object-cover mb-7 rounded-sm"
+                    className="w-full h-auto mb-7 rounded-sm"
                   />
                 )}
                 <h2 className="font-display text-3xl text-stone-800 mb-4">{update.title}</h2>
-                <p className="text-stone-600 text-sm leading-relaxed">{update.content}</p>
+                <div className="text-stone-600 text-sm leading-relaxed space-y-4">
+                  {update.content.split('\n\n').map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
                 {update.link && (
                   <a
                     href={update.link}
