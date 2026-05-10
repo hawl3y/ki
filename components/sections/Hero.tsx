@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-neutral-950">
       <Image
-        src="/images/hero.jpg"
+        src="/images/ki.jpg"
         alt="Kiyomi Hawley"
         fill
         className="object-cover object-center"
