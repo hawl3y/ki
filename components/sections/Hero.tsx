@@ -29,7 +29,7 @@ export default function Hero() {
         <motion.h1
           variants={fadeUp}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-stone-100 uppercase"
+          className="font-display text-5xl sm:text-6xl md:text-5xl tracking-[0.12em] text-stone-100 uppercase"
         >
           Kiyomi Hawley
         </motion.h1>
@@ -37,7 +37,7 @@ export default function Hero() {
         <motion.p
           variants={fadeUp}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 text-xs sm:text-sm tracking-[0.35em] text-stone-400 uppercase"
+          className="mt-5 text-xs sm:text-sm tracking-[0.35em] text-stone-400 uppercase whitespace-nowrap"
         >
           Singer &nbsp;·&nbsp; Songwriter &nbsp;·&nbsp; Artist
         </motion.p>
