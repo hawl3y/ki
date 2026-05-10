@@ -11,11 +11,11 @@ export interface Update {
 
 export const updates: Update[] = [
   {
-    slug: 'spring-show',
-    date: '2026-05-01',
+    slug: 'book-launch',
+    date: '2026-11-11',
     type: 'event',
-    title: 'Spring Show — Coming Soon',
-    excerpt: 'New dates being announced. Check back here for details.',
-    content: 'New dates being announced. Check back here for details.',
+    title: 'Book Launch — 11.11.2026',
+    excerpt: 'More details coming soon.',
+    content: 'More details coming soon. Check back here for updates.',
   },
 ];
