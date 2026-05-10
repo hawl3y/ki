@@ -20,6 +20,7 @@ export const releases: Release[] = [
     type: 'EP',
     year: 2018,
     description: 'Five-track release written by Kiyomi and produced by Kevin Bents.',
+    imageUrl: '/images/meet-you-there-cover.jpg',
     link: 'https://soundcloud.com/kiyomi/03-meet-you-there',
     tracks: ['Meet You There', 'Wedding Song', 'Miss You Love You', 'Shine', 'Little Angel'],
   },
