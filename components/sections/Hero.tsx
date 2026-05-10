@@ -10,7 +10,7 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-neutral-950 flex items-center justify-center">
+    <section className="relative h-screen w-full overflow-hidden bg-neutral-950">
       <Image
         src="/images/hero.jpg"
         alt="Kiyomi Hawley"
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-neutral-950/55" />
 
       <motion.div
-        className="relative z-10 text-center px-6"
+        className="absolute bottom-16 left-1/2 -translate-x-1/2 md:left-16 md:translate-x-0 z-10 text-center md:text-left px-6 md:px-0"
         initial="hidden"
         animate="show"
         transition={{ staggerChildren: 0.18 }}
@@ -29,7 +29,7 @@ export default function Hero() {
         <motion.h1
           variants={fadeUp}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display text-6xl sm:text-8xl md:text-9xl tracking-[0.12em] text-stone-100 uppercase"
+          className="font-display text-5xl sm:text-6xl md:text-7xl tracking-[0.12em] text-stone-100 uppercase"
         >
           Kiyomi Hawley
         </motion.h1>
