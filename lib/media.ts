@@ -6,6 +6,7 @@ export interface Release {
   link?: string;
   imageUrl?: string;
   tracks?: string[];
+  tracksNumbered?: boolean;
 }
 
 export interface MediaItem {
@@ -23,6 +24,7 @@ export const releases: Release[] = [
     imageUrl: '/images/meet-you-there-cover.jpg',
     link: 'https://soundcloud.com/kiyomi/03-meet-you-there',
     tracks: ['Meet You There', 'Wedding Song', 'Miss You Love You', 'Shine', 'Little Angel'],
+    tracksNumbered: true,
   },
   {
     title: 'Miss You Love You',
