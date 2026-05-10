@@ -32,7 +32,7 @@ export default function Nav() {
           alt="Kiyomi Hawley"
           width={160}
           height={40}
-          className="h-14 w-auto"
+          className="h-12 w-auto [filter:drop-shadow(0_1px_3px_rgba(0,0,0,0.35))]"
         />
       </Link>
       <div className="flex items-center gap-6">

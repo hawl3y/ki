@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: var(--font-playfair), Georgia, serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-sans), system-ui, sans-serif;
 }
