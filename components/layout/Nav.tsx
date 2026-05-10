@@ -25,6 +25,14 @@ export default function Nav() {
           : 'bg-stone-50/95 backdrop-blur-sm border-b border-stone-200'
       }`}
     >
+      <Link
+        href="/"
+        className={`font-display text-base tracking-[0.15em] transition-colors duration-300 ${
+          overHero ? 'text-stone-100 hover:text-white' : 'text-stone-800 hover:text-stone-600'
+        }`}
+      >
+        Kiyomi Hawley
+      </Link>
       <div className="flex items-center gap-6">
         {(['media', 'music', 'updates'] as const).map((page) => (
           <Link
@@ -40,14 +48,6 @@ export default function Nav() {
           </Link>
         ))}
       </div>
-      <Link
-        href="/"
-        className={`font-display text-base tracking-[0.2em] uppercase transition-colors duration-300 ${
-          overHero ? 'text-stone-100 hover:text-white' : 'text-stone-800 hover:text-stone-600'
-        }`}
-      >
-        Kiyomi
-      </Link>
     </nav>
   );
 }
