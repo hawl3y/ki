@@ -5,6 +5,7 @@ export interface Release {
   description: string;
   link?: string;
   imageUrl?: string;
+  tracks?: string[];
 }
 
 export interface MediaItem {
@@ -18,8 +19,9 @@ export const releases: Release[] = [
     title: 'Meet You There',
     type: 'EP',
     year: 2018,
-    description: 'Five-track release written by Kiyomi and produced by Kevin Bents. Includes "Wedding Song" and "Shine".',
+    description: 'Five-track release written by Kiyomi and produced by Kevin Bents.',
     link: 'https://soundcloud.com/kiyomi/03-meet-you-there',
+    tracks: ['Meet You There', 'Wedding Song', 'Miss You Love You', 'Shine', 'Little Angel'],
   },
   {
     title: 'Miss You Love You',

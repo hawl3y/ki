@@ -80,6 +80,16 @@ export default function MediaPage() {
                       </span>
                     </div>
                     <p className="text-sm text-stone-600 leading-relaxed">{release.description}</p>
+                    {release.tracks && (
+                      <ul className="mt-3 flex flex-col gap-1">
+                        {release.tracks.map((track) => (
+                          <li key={track} className="flex items-center gap-2 text-sm text-stone-500">
+                            <span className="w-1 h-1 rounded-full bg-stone-300 shrink-0" />
+                            {track}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>
