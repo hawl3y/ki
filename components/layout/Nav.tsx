@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -25,13 +26,14 @@ export default function Nav() {
           : 'bg-stone-50/95 backdrop-blur-sm border-b border-stone-200'
       }`}
     >
-      <Link
-        href="/"
-        className={`font-display text-base tracking-[0.15em] transition-colors duration-300 ${
-          overHero ? 'text-stone-100 hover:text-white' : 'text-stone-800 hover:text-stone-600'
-        }`}
-      >
-        Kiyomi Hawley
+      <Link href="/" className="opacity-90 hover:opacity-100 transition-opacity duration-300">
+        <Image
+          src="/images/kiyomi-logo.png"
+          alt="Kiyomi Hawley"
+          width={160}
+          height={40}
+          className="h-14 w-auto"
+        />
       </Link>
       <div className="flex items-center gap-6">
         {(['media', 'music', 'updates'] as const).map((page) => (

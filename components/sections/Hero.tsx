@@ -31,40 +31,35 @@ export default function Hero() {
         >
           <Link
             href="/music"
-            className="flex gap-4 items-center bg-neutral-950/60 backdrop-blur-sm border border-stone-700/40 rounded-sm p-4 max-w-xs hover:border-stone-500/60 transition-colors"
+            className="flex flex-col bg-neutral-950/60 backdrop-blur-sm border border-stone-700/40 rounded-sm overflow-hidden w-56 md:w-72 hover:border-stone-500/60 transition-colors"
           >
             <img
               src="/images/meet-you-there-cover.jpg"
               alt="Meet You There"
-              className="w-16 h-16 object-cover rounded-sm shrink-0"
+              className="w-full aspect-square object-cover"
             />
-            <div>
-              <p className="text-[10px] tracking-[0.25em] text-stone-400 uppercase mb-1">Available Now</p>
-              <p className="font-display text-stone-100 text-lg leading-tight">Meet You There</p>
-              <p className="text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-1">Listen →</p>
+            <div className="p-4 md:p-5">
+              <p className="text-[10px] tracking-[0.25em] text-stone-400 uppercase mb-2">Available Now</p>
+              <p className="font-display text-stone-100 text-xl md:text-2xl leading-tight">Meet You There</p>
+              <p className="text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-3">Listen →</p>
             </div>
           </Link>
         </motion.div>
 
-        {/* Logo + tagline */}
+        {/* Name + tagline */}
         <motion.div
-          className="flex flex-col items-center"
+          className="flex flex-col items-center text-center"
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.18 }}
         >
-          <motion.div
+          <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display text-5xl md:text-6xl tracking-[0.12em] text-stone-100"
           >
-            <Image
-              src="/images/white-kiyomi-hawley-logo.png"
-              alt="Kiyomi Hawley"
-              width={480}
-              height={120}
-              className="h-48 w-auto md:h-60"
-            />
-          </motion.div>
+            Kiyomi Hawley
+          </motion.h1>
           <motion.p
             variants={fadeUp}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
