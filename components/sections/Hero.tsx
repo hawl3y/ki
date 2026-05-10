@@ -31,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="font-display text-6xl sm:text-8xl md:text-9xl tracking-[0.12em] text-stone-100 uppercase"
         >
-          Kiyomi
+          Kiyomi Hawley
         </motion.h1>
 
         <motion.p
