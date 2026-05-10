@@ -34,7 +34,7 @@ export default function Nav() {
         Kiyomi
       </Link>
       <div className="flex items-center gap-6">
-        {(['media', 'updates'] as const).map((page) => (
+        {(['media', 'music', 'updates'] as const).map((page) => (
           <Link
             key={page}
             href={`/${page}`}
