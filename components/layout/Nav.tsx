@@ -33,16 +33,21 @@ export default function Nav() {
       >
         Kiyomi
       </Link>
-      <Link
-        href="/updates"
-        className={`text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 ${
-          path === '/updates'
-            ? overHero ? 'text-stone-200' : 'text-stone-800'
-            : overHero ? 'text-stone-400 hover:text-stone-200' : 'text-stone-500 hover:text-stone-800'
-        }`}
-      >
-        Updates
-      </Link>
+      <div className="flex items-center gap-6">
+        {(['media', 'updates'] as const).map((page) => (
+          <Link
+            key={page}
+            href={`/${page}`}
+            className={`text-[11px] tracking-[0.3em] uppercase transition-colors duration-300 ${
+              path === `/${page}`
+                ? overHero ? 'text-stone-200' : 'text-stone-800'
+                : overHero ? 'text-stone-400 hover:text-stone-200' : 'text-stone-500 hover:text-stone-800'
+            }`}
+          >
+            {page.charAt(0).toUpperCase() + page.slice(1)}
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 }
