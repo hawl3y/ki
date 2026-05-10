@@ -53,24 +53,35 @@ export default function MediaPage() {
           <div className="flex flex-col divide-y divide-stone-200">
             {releases.map((release) => (
               <div key={release.title} className="py-8 first:pt-0">
-                <div className="flex items-baseline gap-3 mb-2">
-                  {release.link ? (
-                    <a
-                      href={release.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-display text-2xl text-stone-800 hover:text-stone-500 transition-colors"
-                    >
-                      {release.title}
-                    </a>
-                  ) : (
-                    <span className="font-display text-2xl text-stone-800">{release.title}</span>
+                <div className={release.imageUrl ? 'flex gap-6 items-start' : undefined}>
+                  {release.imageUrl && (
+                    <img
+                      src={release.imageUrl}
+                      alt={release.title}
+                      className="w-24 h-24 object-cover rounded-sm shrink-0"
+                    />
                   )}
-                  <span className="text-[11px] tracking-[0.25em] uppercase text-stone-400">
-                    {release.type} · {release.year}
-                  </span>
+                  <div>
+                    <div className="flex flex-wrap items-baseline gap-3 mb-2">
+                      {release.link ? (
+                        <a
+                          href={release.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-display text-2xl text-stone-800 hover:text-stone-500 transition-colors"
+                        >
+                          {release.title}
+                        </a>
+                      ) : (
+                        <span className="font-display text-2xl text-stone-800">{release.title}</span>
+                      )}
+                      <span className="text-[11px] tracking-[0.25em] uppercase text-stone-400">
+                        {release.type} · {release.year}
+                      </span>
+                    </div>
+                    <p className="text-sm text-stone-600 leading-relaxed">{release.description}</p>
+                  </div>
                 </div>
-                <p className="text-sm text-stone-600 leading-relaxed">{release.description}</p>
               </div>
             ))}
           </div>

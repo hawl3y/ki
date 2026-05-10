@@ -1,9 +1,10 @@
 export interface Release {
   title: string;
-  type: 'Album' | 'EP' | 'Single';
+  type: 'Album' | 'EP' | 'Single' | 'Book';
   year: number;
   description: string;
   link?: string;
+  imageUrl?: string;
 }
 
 export interface MediaItem {
