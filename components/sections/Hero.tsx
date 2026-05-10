@@ -62,7 +62,7 @@ export default function Hero() {
               alt="Kiyomi Hawley"
               width={480}
               height={120}
-              className="h-36 w-auto md:h-44"
+              className="h-48 w-auto md:h-60"
             />
           </motion.div>
           <motion.p
