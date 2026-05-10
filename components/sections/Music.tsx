@@ -1,5 +1,10 @@
-const SPOTIFY_TRACK_ID = '0zYroTvrnjDjd1nWHbkgZR';
+const SOUNDCLOUD_TRACK_URL = 'https://soundcloud.com/kiyomi/03-meet-you-there';
 const YOUTUBE_VIDEO_ID = 'OWvJKu5QcQw';
+
+const soundcloudSrc =
+  `https://w.soundcloud.com/player/?url=${encodeURIComponent(SOUNDCLOUD_TRACK_URL)}` +
+  `&visual=true&auto_play=false&hide_related=true&show_comments=false` +
+  `&show_user=false&show_reposts=false&show_teaser=false`;
 
 export default function Music() {
   return (
@@ -8,19 +13,20 @@ export default function Music() {
         <h2 className="font-display text-4xl tracking-[0.18em] text-stone-700 uppercase mb-16 text-center">
           Music
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <p className="text-[11px] tracking-[0.3em] uppercase text-stone-400 mb-4">Listen</p>
-            <iframe
-              src={`https://open.spotify.com/embed/track/${SPOTIFY_TRACK_ID}?utm_source=generator`}
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-              title="Kiyomi Hawley on Spotify"
-              className="rounded-sm"
-            />
+            <div className="aspect-video w-full">
+              <iframe
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src={soundcloudSrc}
+                width="100%"
+                height="100%"
+                title="Kiyomi Hawley on SoundCloud"
+              />
+            </div>
           </div>
           <div>
             <p className="text-[11px] tracking-[0.3em] uppercase text-stone-400 mb-4">Watch</p>
@@ -33,7 +39,6 @@ export default function Music() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 title="Kiyomi Hawley on YouTube"
-                className="rounded-sm"
               />
             </div>
           </div>
