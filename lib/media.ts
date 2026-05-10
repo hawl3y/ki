@@ -22,7 +22,6 @@ export const releases: Release[] = [
     year: 2018,
     description: 'Written by Kiyomi Hawley and produced by Kevin Bents',
     imageUrl: '/images/meet-you-there-cover.jpg',
-    link: 'https://soundcloud.com/kiyomi/03-meet-you-there',
     tracks: ['Meet You There', 'Wedding Song', 'Miss You Love You', 'Shine', 'Little Angel'],
     tracksNumbered: true,
   },
@@ -48,7 +47,7 @@ export const releases: Release[] = [
     title: 'A Part of Me',
     type: 'EP',
     year: 2008,
-    description: 'Five-song EP.',
+    description: 'Written and produced by Kiyomi Hawley',
     imageUrl: '/images/a-part-of-me-cover.jpg',
     tracks: ['A Part of Me', 'Flustered', 'Little Girl Smiling', 'Mysterious You', 'My Place'],
     tracksNumbered: true,
@@ -56,7 +55,7 @@ export const releases: Release[] = [
 ];
 
 export const airplay: MediaItem[] = [
-  { outlet: 'Spotify', link: 'https://open.spotify.com/artist/' },
+  { outlet: 'Spotify' },
   { outlet: 'Pandora' },
   { outlet: 'WXCI 91.7 FM', detail: 'College radio' },
   { outlet: 'WUSB', detail: 'College radio' },
