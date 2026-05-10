@@ -38,23 +38,23 @@ export default function Social() {
   }, []);
 
   return (
-    <section className="bg-neutral-950 py-28 px-6">
+    <section className="bg-stone-50 py-28 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-center gap-8 mb-14">
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-stone-500 hover:text-stone-200 transition-colors text-[11px] tracking-[0.3em] uppercase"
+            className="flex items-center gap-2 text-stone-400 hover:text-stone-800 transition-colors text-[11px] tracking-[0.3em] uppercase"
           >
             <InstagramIcon /> Instagram
           </a>
-          <span className="text-stone-800">·</span>
+          <span className="text-stone-300">·</span>
           <a
             href={FACEBOOK_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-stone-500 hover:text-stone-200 transition-colors text-[11px] tracking-[0.3em] uppercase"
+            className="flex items-center gap-2 text-stone-400 hover:text-stone-800 transition-colors text-[11px] tracking-[0.3em] uppercase"
           >
             <FacebookIcon /> Facebook
           </a>

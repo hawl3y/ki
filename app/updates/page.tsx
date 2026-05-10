@@ -15,21 +15,21 @@ export const metadata = {
 
 export default function UpdatesPage() {
   return (
-    <main className="min-h-screen bg-neutral-950">
+    <main className="min-h-screen bg-stone-50">
       <div className="max-w-2xl mx-auto px-6 pt-32 pb-24">
-        <h1 className="font-display text-5xl tracking-[0.18em] text-stone-200 uppercase mb-20 text-center">
+        <h1 className="font-display text-5xl tracking-[0.18em] text-stone-700 uppercase mb-20 text-center">
           Updates
         </h1>
 
         {updates.length === 0 ? (
-          <p className="text-stone-600 text-center text-[11px] tracking-widest uppercase">
+          <p className="text-stone-400 text-center text-[11px] tracking-widest uppercase">
             More soon.
           </p>
         ) : (
-          <div className="flex flex-col divide-y divide-stone-900">
+          <div className="flex flex-col divide-y divide-stone-200">
             {updates.map((update) => (
               <article key={update.slug} className="py-14 first:pt-0">
-                <p className="text-[11px] tracking-[0.3em] uppercase text-stone-600 mb-4">
+                <p className="text-[11px] tracking-[0.3em] uppercase text-stone-400 mb-4">
                   {formatDate(update.date)}
                 </p>
                 {update.imageUrl && (
@@ -39,14 +39,14 @@ export default function UpdatesPage() {
                     className="w-full aspect-video object-cover mb-7 rounded-sm"
                   />
                 )}
-                <h2 className="font-display text-3xl text-stone-200 mb-4">{update.title}</h2>
-                <p className="text-stone-500 text-sm leading-relaxed">{update.content}</p>
+                <h2 className="font-display text-3xl text-stone-800 mb-4">{update.title}</h2>
+                <p className="text-stone-600 text-sm leading-relaxed">{update.content}</p>
                 {update.link && (
                   <a
                     href={update.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-5 text-[11px] tracking-[0.3em] uppercase text-stone-400 border-b border-stone-700 pb-0.5 hover:text-stone-200 transition-colors"
+                    className="inline-block mt-5 text-[11px] tracking-[0.3em] uppercase text-stone-500 border-b border-stone-300 pb-0.5 hover:text-stone-800 transition-colors"
                   >
                     Read More
                   </a>
