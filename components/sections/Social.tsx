@@ -49,7 +49,7 @@ export default function Social() {
   return (
     <section className="bg-stone-50 py-28 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="flex items-center justify-center gap-8 mb-14">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-14">
           <a
             href={INSTAGRAM_URL}
             target="_blank"
@@ -58,7 +58,6 @@ export default function Social() {
           >
             <InstagramIcon /> Instagram
           </a>
-          <span className="text-stone-300">·</span>
           <a
             href={FACEBOOK_URL}
             target="_blank"
@@ -67,7 +66,6 @@ export default function Social() {
           >
             <FacebookIcon /> Facebook
           </a>
-          <span className="text-stone-300">·</span>
           <a
             href={YOUTUBE_URL}
             target="_blank"
