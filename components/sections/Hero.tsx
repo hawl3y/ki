@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <Link
-            href="/music"
+            href="https://soundcloud.com/kiyomi/03-meet-you-there?utm_source=clipboard&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fkiyomi%252F03-meet-you-there" target="_new"
             className="flex flex-row h-24 md:h-auto md:flex-col bg-neutral-950/60 backdrop-blur-sm border border-stone-700/40 rounded-sm overflow-hidden w-full max-w-xs md:w-72 hover:border-stone-500/60 transition-colors"
           >
             <img
@@ -39,7 +39,7 @@ export default function Hero() {
               className="w-24 h-24 shrink-0 object-cover md:w-full md:h-auto md:aspect-square"
             />
             <div className="px-4 flex flex-col justify-center md:p-5">
-              <p className="text-[10px] tracking-[0.25em] text-stone-400 uppercase mb-1 md:mb-2">Available Now</p>
+              <p className="text-[10px] tracking-[0.25em] text-stone-400 uppercase mb-1 md:mb-2">Now Streaming</p>
               <p className="font-display text-stone-100 text-lg md:text-2xl leading-tight">Meet You There</p>
               <p className="text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-2 md:mt-3">Listen →</p>
             </div>

@@ -33,11 +33,11 @@ export default function Nav() {
           ? 'bg-stone-900'
           : overHero
           ? 'bg-transparent'
-          : 'bg-stone-50/95 backdrop-blur-sm border-b border-stone-200'
+          : 'bg-stone-100/95 backdrop-blur-sm border-b border-stone-200'
       }`}>
         <Link href="/" className="opacity-90 hover:opacity-100 transition-opacity duration-300">
           <Image
-            src={overHero || menuOpen ? '/images/white-ki-logo.png' : '/images/black-ki-logo.png'}
+            src={overHero || menuOpen ? '/images/white-kiyomi-logo.png' : '/images/black-kiyomi-logo.png'}
             alt="Kiyomi Hawley"
             width={160}
             height={40}
