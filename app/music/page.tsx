@@ -8,7 +8,7 @@ export const metadata = {
 export default function MusicPage() {
   return (
     <main className="min-h-screen bg-stone-50">
-      <div className="max-w-3xl mx-auto px-6 pt-32 pb-24">
+      <div className="max-w-3xl mx-auto px-6 pt-40 pb-24">
         <h1 className="font-display text-5xl tracking-[0.18em] text-stone-700 uppercase mb-20 text-center">
           Music
         </h1>

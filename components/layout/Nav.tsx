@@ -41,7 +41,7 @@ export default function Nav() {
             alt="Kiyomi Hawley"
             width={160}
             height={40}
-            className="h-18 w-auto"
+            className="h-18 md:h-24 w-auto"
             priority
           />
         </Link>
