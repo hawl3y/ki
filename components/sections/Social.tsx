@@ -1,7 +1,5 @@
-"use client";
-
-import { useEffect, useRef } from 'react';
-import { BEHOLD_WIDGET_ID, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL } from '@/lib/config';
+import { INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL } from '@/lib/config';
+import InstagramFeed from './InstagramFeed';
 
 function InstagramIcon() {
   return (
@@ -31,21 +29,6 @@ function YouTubeIcon() {
 }
 
 export default function Social() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const widget = document.createElement('behold-widget');
-    widget.setAttribute('feed-id', BEHOLD_WIDGET_ID);
-    containerRef.current.appendChild(widget);
-
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = 'https://w.behold.so/widget.js';
-    document.head.appendChild(script);
-  }, []);
-
   return (
     <section className="bg-stone-50 py-28 px-6">
       <div className="max-w-5xl mx-auto">
@@ -76,7 +59,7 @@ export default function Social() {
           </a>
         </div>
 
-        <div ref={containerRef} />
+        <InstagramFeed />
       </div>
     </section>
   );
