@@ -31,17 +31,17 @@ export default function Hero() {
         >
           <Link
             href="/music"
-            className="flex flex-col bg-neutral-950/60 backdrop-blur-sm border border-stone-700/40 rounded-sm overflow-hidden w-56 md:w-72 hover:border-stone-500/60 transition-colors"
+            className="flex flex-row h-24 md:h-auto md:flex-col bg-neutral-950/60 backdrop-blur-sm border border-stone-700/40 rounded-sm overflow-hidden w-full max-w-xs md:w-72 hover:border-stone-500/60 transition-colors"
           >
             <img
               src="/images/meet-you-there-cover.jpg"
               alt="Meet You There"
-              className="w-full aspect-square object-cover"
+              className="w-24 h-24 shrink-0 object-cover md:w-full md:h-auto md:aspect-square"
             />
-            <div className="p-4 md:p-5">
-              <p className="text-[10px] tracking-[0.25em] text-stone-400 uppercase mb-2">Available Now</p>
-              <p className="font-display text-stone-100 text-xl md:text-2xl leading-tight">Meet You There</p>
-              <p className="text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-3">Listen →</p>
+            <div className="px-4 flex flex-col justify-center md:p-5">
+              <p className="text-[10px] tracking-[0.25em] text-stone-400 uppercase mb-1 md:mb-2">Available Now</p>
+              <p className="font-display text-stone-100 text-lg md:text-2xl leading-tight">Meet You There</p>
+              <p className="text-[10px] tracking-[0.2em] text-stone-400 uppercase mt-2 md:mt-3">Listen →</p>
             </div>
           </Link>
         </motion.div>
@@ -56,7 +56,7 @@ export default function Hero() {
           <motion.h1
             variants={fadeUp}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-5xl md:text-6xl tracking-[0.12em] text-stone-100"
+            className="font-display text-5xl md:text-6xl tracking-[0.12em] text-stone-100 uppercase"
           >
             Kiyomi Hawley
           </motion.h1>
