@@ -37,7 +37,7 @@ export default function Nav() {
       }`}>
         <Link href="/" className="opacity-90 hover:opacity-100 transition-opacity duration-300">
           <Image
-            src={overHero || menuOpen ? '/images/white-kiyomi-logo.png' : '/images/black-kiyomi-logo.png'}
+            src={overHero || menuOpen ? '/images/kiyomi-logo-white.png' : '/images/kiyomi-logo-black.png'}
             alt="Kiyomi Hawley"
             width={160}
             height={40}
