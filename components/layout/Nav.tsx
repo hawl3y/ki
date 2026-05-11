@@ -37,11 +37,11 @@ export default function Nav() {
       }`}>
         <Link href="/" className="opacity-90 hover:opacity-100 transition-opacity duration-300">
           <Image
-            src="/images/kiki-logo.png"
+            src={overHero || menuOpen ? '/images/white-ki-logo.png' : '/images/black-ki-logo.png'}
             alt="Kiyomi Hawley"
             width={160}
             height={40}
-            className="h-18 w-auto [filter:drop-shadow(0_1px_3px_rgba(0,0,0,0.35))]"
+            className="h-18 w-auto"
             priority
           />
         </Link>
