@@ -15,7 +15,7 @@ export const updates: Update[] = [
     date: '2021-04-05',
     type: 'event',
     title: 'Monday April 5th New York Songwriter\'s Circle',
-    excerpt: 'Experience a live virtual showcase featuring standout songwriters.',
+    excerpt: '',
     content: 'Join the New York Songwriters Circle for a virtual showcase on Monday, April 5th at 7:30 PM.' + 
     ' This online event brings together a curated group of talented artists performing original music in an intimate,' + 
     ' live-streamed setting.\n\nThe evening features performances by Hayden Joseph, Alex Noelle, Anson Jones, Colin Kelly,' + 
