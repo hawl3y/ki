@@ -4,17 +4,21 @@ import { useEffect, useState } from 'react';
 
 export default function Footer() {
   const [count, setCount] = useState<number | null>(null);
+  const [today, setToday] = useState<number | null>(null);
   const year = new Date().getFullYear();
 
   useEffect(() => {
-    const counted = sessionStorage.getItem('ki_counted');
+    const todayDate = new Date().toISOString().slice(0, 10);
+    const storageKey = `ki_counted:${todayDate}`;
+    const counted = sessionStorage.getItem(storageKey);
     const method = counted ? 'GET' : 'POST';
 
     fetch('/api/visit', { method })
       .then((r) => r.json())
       .then((data) => {
         setCount(data.count);
-        if (!counted) sessionStorage.setItem('ki_counted', '1');
+        setToday(data.today);
+        if (!counted) sessionStorage.setItem(storageKey, '1');
       })
       .catch(() => {});
   }, []);
@@ -24,7 +28,10 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-stone-400 tracking-[0.2em] uppercase">
         <p>© {year} Kiyomi Hawley</p>
         {count !== null && (
-          <p>{count.toLocaleString()} visitors</p>
+          <p>
+            {count.toLocaleString()} visitors
+            {today !== null && <span className="text-stone-300"> ({today.toLocaleString()} today)</span>}
+          </p>
         )}
       </div>
     </footer>
