@@ -15,7 +15,13 @@ export default function LatestUpdate() {
     <section className="bg-stone-100 py-28 px-6">
       <div className="max-w-xl mx-auto text-center">
         <p className="text-[11px] tracking-[0.35em] uppercase text-stone-400 mb-4">{date}</p>
-        <h2 className="font-display text-4xl text-stone-800 mb-5">{latest.title}</h2>
+        {latest.link ? (
+          <a href={latest.link} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+            <h2 className="font-display text-4xl text-stone-800 mb-5">{latest.title}</h2>
+          </a>
+        ) : (
+          <h2 className="font-display text-4xl text-stone-800 mb-5">{latest.title}</h2>
+        )}
         <p className="text-stone-600 text-sm leading-relaxed mb-10">{latest.excerpt}</p>
         <Link
           href="/updates"
