@@ -10,7 +10,7 @@ function getRedis(): Redis | null {
 }
 
 function todayKey(prefix: string): string {
-  const d = new Date().toISOString().slice(0, 10);
+  const d = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   return `${prefix}:${d}`;
 }
 
