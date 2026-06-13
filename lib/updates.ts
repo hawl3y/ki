@@ -11,6 +11,16 @@ export interface Update {
 
 export const updates: Update[] = [
   {
+    slug: 'newsweek-moonie-wedding',
+    date: '2026-06-13',
+    type: 'article',
+    title: 'I Married a Photograph. Then I Met My Husband For the First Time',
+    excerpt: 'Kiyomi\'s personal essay about her experience as a Moonie bride, published in Newsweek.',
+    content: 'Read Kiyomi\'s personal essay in Newsweek about her experience as a young bride in the Unification Church\'s mass wedding ceremony — and the long road to finding herself.',
+    imageUrl: '/images/Newsweek_Jul-13.jpg',
+    link: 'https://www.newsweek.com/married-a-photograph-moonies-wedding-unification-church-12061734',
+  },
+  {
     slug: 'book-launch',
     date: '2021-04-05',
     type: 'event',
